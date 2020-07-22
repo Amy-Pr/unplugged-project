@@ -87,6 +87,148 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*------------------BASE STYLES FOR HEADER AND FOOTER------------- ------*/
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  border: solid 1px blue;
+}
+
+
+header .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  border: solid 1px red;
+  
+  
+}
+
+header nav {
+  display: flex;
+  border: solid 1px green;
+
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  border: solid 2px yellow;
+  
+}
+
+
+footer .social-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: solid 1px red;
+  
+}
+
+footer .social-icons p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px yellow;
+  
+
+}
+
+
+
+
+
+
+
+/*--------------- HOMEPAGE ----------*/
+
+.hero-area {
+  display: flex;
+  justify-content: center;
+  
+
+}
+
+aside {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.features-items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+.reviews {
+  display: flex;
+  
+}
+
+
+
+
+
+/*---------------- ABOUT PAGE ----------*/
+
+
+.mission {
+
+}
+
+.contact-section {
+
+}
+
+
+/*---------------- FAQ PAGE ----------*/
+
+
+
+.faq { 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

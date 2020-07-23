@@ -192,22 +192,23 @@ aside {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-
+  
 }
 
 
 .features {
+  border: solid 1px purple;
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  flex-flow: row wrap;
 }
 
-.features-items {
+.features .features-items {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  border: solid 1px red;
 
 }
 
@@ -215,7 +216,7 @@ aside {
   width: 63%;
   margin: 30px 0;
   text-align: center;
-
+  border: solid 1px yellow;
 }
 
 .features p {
@@ -233,51 +234,48 @@ aside {
 
 .reviews h3 {
   width: 55%;
-
-
 }
-
-
-
 
 /*---------------- ABOUT PAGE ----------*/
 
 
 .mission {
+  display: flex;
+  justify-content: center;
+  
 
 }
 
 .contact-section {
-
+  display: flex;
+  justify-content: center;
 }
 
+.contact-content {
+  font-style: normal;
+}
 
 /*---------------- FAQ PAGE ----------*/
 
-
-
 .faq { 
+  display: flex;
+  justify-content: center; 
+}
+
+.faq-content p{
+  margin-top: 0;
+}
+
+.faq-content h4{
+  margin-bottom: 0;
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.faq .content-wrapper {
+  display: flex;
+  align-items: space-around;
+  flex-flow: row wrap;
+}
 
 
 
@@ -369,15 +367,149 @@ aside {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+  /*Tablet styles here*/
+
+.content-wrapper {
+  max-width: 640px;
+  margin: 100px 0;
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+
+/*Header area*/
+
+
+header {
+  justify-content: space-around; /*I see no difference here vs. center*/
+  padding: 33px 0;
+}
+
+
+header .content-wrapper {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header-divider {
+  display: none;
+}
+
+header nav {
+ width: 20%;
+}
+
+header nav ul {
+  justify-content: space-between;
+}
+
+/* Aside */
+aside .content-wrapper {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap; /*I don't see a difference in how this behaves vs. initial or no flex flow*/ 
+}
+
+aside .content-wrapper .form-description, /*Cannot get the .form to push further to the margin*/
+aside .content-wrapper .form {        
+  width: 40%;        
+  margin: 0;
+}
+
+/* Features */
+
+ 
+.features article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap; /*These don't wrap, I don't know why*/
+  flex-basis: 50%;
+}
+
+.features .features-items-description {
+    width: 50%;
+    
+}
+
+/*Reviews*/
+.reviews article div {
+  width: 49%;
+}
+
+.reviews article {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*footer*/
+footer .content-wrapper {
+  width: 65%;
+  margin: 100px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  /*align-items: center; messes up vertical spacing for some reason*/
+}
+
+footer .contact {
+  margin-bottom: 0;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+
+/**About Page**/
+
+.mission-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mission-content p{
+  width: 45%;
+}
+
+.contact-section .content-wrapper h2 {
+  width: 80%;
+}
+
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /*this doesn't seem to make a difference*/
+}
+
+/*.contact-content div{
+  width: 40%;
+}*/
+
+
+/**FAQ Page***/
+
+.faq .content-wrapper {
+  justify-content: space-between;
+}
+
+.faq-content {
+  flex-basis: 45%; /*why is this better than a fixed width?*/
+}
+
+.faq h2 {
+  width: 100%;
+}
+
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+  /*Desktop styles here*/
 }
 
 /* ==========================================================================

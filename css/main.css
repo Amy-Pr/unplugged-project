@@ -86,14 +86,67 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* General Styles */
+ 
+html {
+	font-size: 16px;
+}
+ 
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  text-align: left;
+}
+ 
+ul, 
+ol {
+  list-style: none;
+}
+ 
+a {
+  color: #e2e3ed;
+  text-decoration: none;
+}
+ 
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.875em;
+  
+}
+ 
+h3, 
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  margin: 20px 0; /*Not a lot of difference on my screen*/
+  font-size: 1.125em;
+}
+ 
+p {
+  font-size: .875em;
+  line-height: 1.285em; /*this should be 18px, but calculated by 14/18, not the base 16 -- is that because we would need rems instead?*/
+	
+}
+ 
+img {
+ 
+}
+ 
+figure {
+ 
+}
+ 
+address {
+  font-style: normal;
+ 
+}
 
-  .content-wrapper {
-    width: 90%;
-    margin: 50px 0;
-  }
+.content-wrapper {
+  width: 90%;
+  margin: 50px 0;
+}
 
 
-/*------------------BASE STYLES FOR HEADER AND FOOTER------------- ------*/
+/*------------------BASE STYLES FOR HEADER AND FOOTER--------------------*/
 header,
 footer {
   display: flex;
@@ -138,7 +191,6 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   padding: 0;
-  list-style: none;
   /*border: solid 2px yellow;*/
   
 }
@@ -164,12 +216,8 @@ footer .social-icons p {
 footer .content-wrapper {
   width: 55%;
   margin: 50px 0;
-  border: solid 1px purple;
+  /*border: solid 1px purple;*/
   text-align: center;
-}
-
- .contact {
-  font-style: normal;
 }
 
 

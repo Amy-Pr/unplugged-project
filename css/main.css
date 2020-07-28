@@ -213,28 +213,22 @@ footer {
   color: #fff;
 }
 
-footer .social-icons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /*border: solid 1px red;*/
-  
-}
+
 
 footer {
   text-align: center;
-  flex-direction: column;
+  flex-direction: column;/*Not totally sure why use this; it makes align-items function, but not justify-content...*/
 }
 
 footer p {
   margin: 0;
 }
 
-footer .content-wrapper {
-  width: 55%;
+footer .content-wrapper { /*Looks the same in mobile version as 100%*/
+  width: 55%; 
   margin: 50px 0;
-  
 }
+
 footer .contact {
   margin-bottom: 50px;
 }
@@ -244,7 +238,6 @@ footer .social-icons {
   justify-content: space-around;
   align-items: center;
 }
-
 
 footer .social-icons p {
   display: flex;
@@ -258,7 +251,7 @@ footer .copyright {
 }
 
 
-/*------------- HOMEPAGE ----------*/
+/*------------- HOMEPAGE----------*/
 
 .hero-area {
   display: flex;
@@ -393,7 +386,7 @@ input[type=button] {
   margin: 50px 0 0 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /*align-items: center; aligns better without this*/
   flex-flow: row wrap;
 }
 
@@ -511,12 +504,13 @@ input[type=button] {
     margin: 100px 0;
   }
   
-  /**************HOMEPAGE**************/
-  /*Header area*/
+  /**************HOMEPAGE TABLET**************/
+
   
+  /*Header area*/ 
   
   header {
-    justify-content: space-around; /*I see no difference here vs. center*/
+    justify-content: space-around; /*I see no difference here vs. center*/ 
     padding: 33px 0;
   }
   
@@ -532,19 +526,29 @@ input[type=button] {
   
   header nav {
    width: 20%;
+   font-size: 1em;
   }
   
   header nav ul {
     justify-content: space-between;
   }
   
+  .hero-area h1 {
+    font-size: 3em;
+    line-height: 1em;
+  }
   
-  /* Aside */
+  /* Aside */ 
+  aside h3 {
+    font-size: 1.5em;
+    line-height: 1.25em;
+  }
+
   aside .content-wrapper {
     margin: 50px 0;
     display: flex;
     justify-content: space-between;
-    flex-flow: row wrap; /*I don't see a difference in how this behaves vs. initial or no flex flow*/ 
+    flex-flow: row wrap; /*I don't see a difference in how this behaves vs. initial or no flex flow*/
   }
   
   aside .content-wrapper .form-description, /*Cannot get the .form to push further to the margin*/
@@ -553,8 +557,11 @@ input[type=button] {
     margin: 0;
   }
   
-  /* Features */
-  
+  /* Features */ 
+  .features h2 {
+    font-size: 2.25em; 
+    line-height: 1.333em;
+  }
    
   .features article {
     display: flex;
@@ -568,9 +575,21 @@ input[type=button] {
     width: 50%;
   }
   
-  /* Reviews */
+  /* Reviews */ 
+
+  .reviews h2 {
+    font-size: 2.25em;
+  } 
+
+  .reviews h3 {
+    width: 100%;
+    font-size: 1.5em;
+    line-height: 1.25em;
+  }  
+
+  
   .reviews article div {
-    width: 49%;
+    width: 49%; /*This overwrites my mobile styles for some reason*/
   }
   
   .reviews article {
@@ -578,7 +597,12 @@ input[type=button] {
     justify-content: space-between;
   }
   
-  /*Footer*/
+  /*Footer*/ 
+
+  footer h4 {
+    font-size: 1.5em; 
+  }
+
   footer .content-wrapper {
     width: 65%;
     margin: 100px 0;
@@ -593,13 +617,21 @@ input[type=button] {
   footer .contact {
     margin-bottom: 0;
   }
+
+  footer .contact p {
+    line-height: 1.714em;
+  }
   
   footer .copyright {
     width: 100%;
     text-align: center;
-  }
+  } 
   
-  /************ABOUT PAGE**************/
+  /************ABOUT PAGE TABLET**************/
+  .mission h2 {
+    font-size: 2.25em;
+  }
+
   
   .mission-content {
     display: flex;
@@ -612,8 +644,13 @@ input[type=button] {
   
   .contact-section .content-wrapper h2 {
     width: 80%;
+    font-size: 2.25em;
+    line-height: 1.333em;
   }
   
+  .contact-section h3 {
+    font-size: 1.5em; 
+  }
   
   .contact-content {
     display: flex;
@@ -621,12 +658,10 @@ input[type=button] {
     align-items: flex-start; /*this doesn't seem to make a difference*/
   }
   
-  /*.contact-content div{
-    width: 40%;
-  }*/
+
   
   
-  /*********************FAQ PAGE*************************/
+  /*********************FAQ PAGE TABLET*************************/
   header {
     padding: 15px 0;
   } 
@@ -641,8 +676,15 @@ input[type=button] {
   
   .faq h2 {
     width: 100%;
+    font-size: 2.25em;
+    line-height: 1.333em;
   }
-  
+
+  .faq h4 {
+    font-size: .875em;
+    line-height: 1.285em;
+  }
+
   }
   
 @media only screen and (min-width: 1200px) {
@@ -650,14 +692,32 @@ input[type=button] {
   .content-wrapper {
     max-width: 960px;
   }
-/**********HOMEPAGE*******/
+/**********HOMEPAGE DESKTOP*******/
+/*header*/
+header nav {
+  font-size: 1.125em;
+}
+
 
  /* Hero */
+
+
  .hero-area h1 {
-  width: 60%; /*No change on my screen*/
+  width: 70%; /*No change on my screen*/
+  font-size: 3.75em;
 }
 
   /* Aside */
+
+  aside h3 {
+    font-size: 1.875em;
+  }
+
+  aside p {
+    font-size: 1.125em;
+    line-height: 1.333em;
+  }
+
   aside .content-wrapper .form-description, 
   aside .content-wrapper .form {        
    width: 33%;        
@@ -666,6 +726,10 @@ input[type=button] {
 
   aside .content-wrapper {
     justify-content: space-around;
+  }
+
+  input[type=button] {
+    font-size: 1.5em;
   }
 
 
@@ -684,24 +748,56 @@ input[type=button] {
   }
 
   /* Reviews */
+  .reviews h3 {
+    font-size: 1.875em;
+  }
+
   .reviews article div {
   width: 42%;
   }
 
+  /*Footer*/
+  footer h4 {
+    font-size: 1.875em;
 
-  /************ABOUT PAGE*****************/
-
-  .mission h2,
-  .contact-section .content-wrapper h2 { /*no difference on my page*/
-      width: 95%;
   }
 
-  /*************FAQ PAGE****************/
+  footer .contact p {
+    font-size: 1.125em;
+    line-height: 1.333em;
+  }
+
+  footer .copyright {
+    font-size: 1.125em;
+  }
+
+  /************ABOUT PAGE DESKTOP*****************/
+
+  .mission h2,
+  .contact-section .content-wrapper h2 { 
+      width: 100%;
+      font-size: 3em;
+  }
+
+  .contact-section h3 {
+      font-size: 1.875em;
+  }
+
+  .contact-content p{
+    font-size: 1.125em;
+  }
+  
+
+  /*************FAQ PAGE DESKTOP****************/
 
   .faq h2 {
     width: 100%; /*Do I need this? No change on my screen...*/
+    font-size: 3em;
   }
   
+  .faq h4, p {
+    font-size: 1.125em;
+  }
 }
 
 /* ==========================================================================

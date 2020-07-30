@@ -336,13 +336,17 @@ input[type=button] {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  
-
 }
 
 .features p {
   margin: 0;
   text-align: center;
+}
+
+
+.features i {
+	font-size: 3.75em;
+  margin-bottom: 40px;
 }
 
 
@@ -824,7 +828,7 @@ header figure {
   .map figure { 
     padding-bottom: 38%; 
   }
-  
+
   .contact-section h3 {
       font-size: 1.875em;
   }

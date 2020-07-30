@@ -253,7 +253,14 @@ footer .social-icons p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+footer .social-icons i {
+  background-color: #527158;
+  color: white;
+  padding: 12px;
+  font-size: 1.125em;
+  border-radius: 50px;
 }
 
 footer .copyright {
@@ -658,6 +665,10 @@ input[type=button] {
   footer .contact p {
     line-height: 1.714em;
   }
+
+  footer .social {
+    width: 50%;
+  }
   
   footer .copyright {
     width: 100%;
@@ -811,6 +822,10 @@ header figure {
   footer .contact p {
     font-size: 1.125em;
     line-height: 1.333em;
+  }
+
+  footer .social {
+    width: 40%;
   }
 
   footer .copyright {

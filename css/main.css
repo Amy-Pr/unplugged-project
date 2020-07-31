@@ -104,6 +104,8 @@ body {
 ul, 
 ol {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
  
 a {
@@ -115,6 +117,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 1.875em; /*30px*/
+  margin: 0;
   
 }
  
@@ -168,7 +171,6 @@ header {
 }
 
 header .content-wrapper {
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,23 +198,20 @@ header figure {
 
 header nav {
   width: 60%;
-  display: flex;
-  justify-content: center;
   font-size: 1.125em;
   font-weight: 700;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
   /*justify-content: space-around;
   align-items: center;
   flex-flow: row wrap; None of this seems to make a difference*/
-
-
 }
 
 header nav ul {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding: 0;
 }
 
 header nav ul li {
@@ -246,7 +245,6 @@ footer .contact {
 footer .social-icons {
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 
 footer .social-icons p {
@@ -259,8 +257,8 @@ footer .social-icons i {
   background-color: #527158;
   color: white;
   padding: 12px;
-  font-size: 1.125em;
-  border-radius: 50px;
+  font-size: 1.3em; 
+  border-radius: 50px; /*50% in the solution, not sure why, doesn't change with screen*/
 }
 
 footer .copyright {
@@ -271,16 +269,19 @@ footer .copyright {
 /*------------- HOMEPAGE----------*/
 
 .hero-area {
+  min-height: 500px;
   display: flex;
   justify-content: center;
   background: url('../img/hero-image-unplugged.jpg') center no-repeat;
   background-size: cover;
 }
 
+
 .hero-area h1 {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 2.25em;
+  line-height: 1.2em;
   
 }
 
@@ -341,7 +342,7 @@ input[type=button] {
 .features .features-items {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-flow: row wrap;
 }
 
@@ -364,6 +365,11 @@ input[type=button] {
   background-color: #2a423a;
  
   
+}
+
+.reviews h2 {
+  margin-bottom: 40px;
+  line-height: 1em;
 }
 
 .reviews h3 {
@@ -540,6 +546,17 @@ input[type=button] {
     max-width: 640px;
     margin: 100px 0;
   }
+
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+  }
+
+  h3 {
+      font-size: 1.5em;
+      line-height: 1.25;
+  }
+
   
   /**************HOMEPAGE TABLET**************/
 
@@ -550,7 +567,7 @@ input[type=button] {
     justify-content: space-around; /*I see no difference here vs. center*/ 
     padding: 33px 0;
   }
-  
+
   
   header .content-wrapper {
     width: 100%;
@@ -571,19 +588,20 @@ input[type=button] {
   }
   
   header figure {
-    width: 35%;
+    width: 30%;
+  }
+
+  .hero-area {
+    min-height: 600px;
   }
 
   .hero-area h1 {
     font-size: 3em;
     line-height: 1em;
+    margin: 0;
   }
   
   /* Aside */ 
-  aside h3 {
-    font-size: 1.5em;
-    line-height: 1.25em;
-  }
 
   aside .content-wrapper {
     margin: 50px 0;
@@ -600,8 +618,7 @@ input[type=button] {
   
   /* Features */ 
   .features h2 {
-    font-size: 2.25em; 
-    line-height: 1.333em;
+    margin-bottom: 20px;
   }
    
   .features article {
@@ -613,19 +630,15 @@ input[type=button] {
   }
   
   .features .features-item-description {
-    width: 50%;
+    width: 62%;
   }
   
   /* Reviews */ 
 
-  .reviews h2 {
-    font-size: 2.25em;
-  } 
+
 
   .reviews h3 {
     width: 100%;
-    font-size: 1.5em;
-    line-height: 1.25em;
     margin: 0;
   }  
 
@@ -645,6 +658,7 @@ input[type=button] {
 
   footer h4 {
     font-size: 1.5em; 
+    margin-bottom: 40px;
   }
 
   footer .content-wrapper {
@@ -665,11 +679,12 @@ input[type=button] {
   footer .contact p {
     line-height: 1.714em;
   }
-
-  footer .social {
-    width: 50%;
-  }
   
+  footer .social-icons {
+    width: 12.5em;
+    justify-content: space-between;
+  }
+
   footer .copyright {
     width: 100%;
     text-align: center;
@@ -684,9 +699,10 @@ input[type=button] {
   .mission-content {
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
   }
   
-  .mission-content p{
+  .mission-content p {
     width: 45%;
   }
   
@@ -715,10 +731,7 @@ input[type=button] {
   
   
   /*********************FAQ PAGE TABLET*************************/
-  header {
-    padding: 15px 0;
-  } 
-  
+
   .faq .content-wrapper {
     justify-content: space-between;
   }
@@ -742,38 +755,52 @@ input[type=button] {
   
 @media only screen and (min-width: 1200px) {
 
+  header {
+    padding: 15px 0;
+  }
+
   .content-wrapper {
     max-width: 960px;
   }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4 {
+      font-size: 1.875em;
+  }
+
+  p {
+      font-size: 1.125em;
+      line-height: 1.333;
+  }
+
 /**********HOMEPAGE DESKTOP*******/
 /*header*/
-header nav {
-  font-size: 1.125em;
-}
+  header nav {
+    font-size: 1.125em;
+  }
 
-header figure {
-  width: 30%;
-}
+  header figure {
+    width: 30%;
+  }
 
 
  /* Hero */
 
+.hero-area .content-wrapper {
+    margin: 50px 0;
+  }
 
  .hero-area h1 {
-  width: 70%; /*No change on my screen*/
-  font-size: 3.75em;
-}
+    width: 70%; /*No change on my screen*/
+    font-size: 3.75em;
+    margin-bottom: 5px;
+  }
 
   /* Aside */
-
-  aside h3 {
-    font-size: 1.875em;
-  }
-
-  aside p {
-    font-size: 1.125em;
-    line-height: 1.333em;
-  }
 
   aside .content-wrapper .form-description, 
   aside .content-wrapper .form {        
@@ -793,43 +820,34 @@ header figure {
  /* Features */
 
   .features h2 {
-    width: 80%;
+    width: 90%;
   }
   
   .features article {
     flex-basis: 33%;
   }
   
-  .features .features-item-description {
-    width: 50%;
-  }
 
   /* Reviews */
-  .reviews h3 {
-    font-size: 1.875em;
+
+  .reviews h2 {
+    padding-bottom: 50px;
   }
+
 
   .reviews article div {
   width: 42%;
   }
 
   /*Footer*/
+
+  footer .social-icons i {
+    padding: 8px;
+
+  }
+
   footer h4 {
     font-size: 1.875em;
-
-  }
-
-  footer .contact p {
-    font-size: 1.125em;
-    line-height: 1.333em;
-  }
-
-  footer .social {
-    width: 40%;
-  }
-
-  footer .copyright {
-    font-size: 1.125em;
   }
 
   /************ABOUT PAGE DESKTOP*****************/
